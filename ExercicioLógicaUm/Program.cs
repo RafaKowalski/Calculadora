@@ -1,7 +1,5 @@
 ﻿using ExercicioLógicaUm.Entities;
 using ExercicioLógicaUm.Entities.Enums;
-using System.Linq;
-using System;
 using System.Collections.Generic;
 
 namespace ExercicioLogicaUm

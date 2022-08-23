@@ -45,7 +45,7 @@ namespace ExercicioLógicaUm.Entities
 
         public override string ToString()
         {
-            return "Resultado: " + Resultado;
+            return "Resultado: " + Resultado.ToString("F2");
         }
     }
 }
