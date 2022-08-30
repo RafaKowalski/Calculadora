@@ -1,6 +1,4 @@
-﻿
-
-namespace ExercicioLógicaUm.Entities.Enums
+﻿namespace ExercicioLógicaUm.Entities.Enums
 {
     public enum Operacoes : int
     {

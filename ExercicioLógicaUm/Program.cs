@@ -1,6 +1,5 @@
 ﻿using ExercicioLógicaUm.Entities;
 using ExercicioLógicaUm.Entities.Enums;
-using System.Collections.Generic;
 
 namespace ExercicioLogicaUm
 {
@@ -8,45 +7,54 @@ namespace ExercicioLogicaUm
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Digite a quantidade de operações que deseja realizar");
-            int n = int.Parse(Console.ReadLine());
-
-            List<Calculadora> list = new List<Calculadora>();
-
-            for (int i = 1; i <= n; i++)
+            while (true)
             {
-                Console.WriteLine("Digite o primeiro numero:");
-                float numeroUm = float.Parse(Console.ReadLine());
+                Console.WriteLine("Digite a quantidade de operações que deseja realizar");
+                int n = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Digite o segundo numero:");
-                float numeroDois = float.Parse(Console.ReadLine());
+                List<Calculadora> list = new List<Calculadora>();
 
-                Console.WriteLine("Escolha a operação que deseja realizar: Adicao/subtracao/multiplicacao/divisao");
-                Operacoes operacoes = Enum.Parse<Operacoes>(Console.ReadLine());
+                for (int i = 1; i <= n; i++)
+                {
+                    Console.WriteLine("Digite o primeiro numero:");
+                    float numeroUm = float.Parse(Console.ReadLine());
 
-                Calculadora calc = new Calculadora(numeroUm, numeroDois, operacoes);
+                    Console.WriteLine("Digite o segundo numero:");
+                    float numeroDois = float.Parse(Console.ReadLine());
 
-                if (operacoes == Operacoes.Adicao)
-                    calc.Adicao();
+                    Console.WriteLine("Escolha a operação que deseja realizar: Adicao/subtracao/multiplicacao/divisao");
+                    Operacoes operacoes = Enum.Parse<Operacoes>(Console.ReadLine());
 
-                else if (operacoes == Operacoes.Subtracao)
-                    calc.Subtracao();
+                    Calculadora calc = new Calculadora(numeroUm, numeroDois, operacoes);
 
-                else if (operacoes == Operacoes.Multiplicacao)
-                    calc.Multipicacao();
+                    if (operacoes == Operacoes.Adicao)
+                        calc.Adicao();
 
-                else if (operacoes == Operacoes.Divisao)
-                    calc.Divisao();
+                    else if (operacoes == Operacoes.Subtracao)
+                        calc.Subtracao();
 
-                list.Add(calc);
+                    else if (operacoes == Operacoes.Multiplicacao)
+                        calc.Multipicacao();
 
-                Console.WriteLine(calc);
+                    else if (operacoes == Operacoes.Divisao)
+                        calc.Divisao();
+
+                    list.Add(calc);
+
+                    Console.WriteLine(calc);
+                }
+
+                Console.WriteLine("Histórico de resultados: ");
+                foreach (Calculadora calc in list)
+                    Console.WriteLine(calc);
+
+                Console.WriteLine("Deseja continuar? S/N");
+                char cont = char.Parse(Console.ReadLine());
+
+                if (cont == 'n' || cont == 'N')
+                    break;
             }
-
-            Console.WriteLine("Histórico de resultados: ");
-            foreach (Calculadora calc in list)
-                Console.WriteLine(calc);
+            
         }
     }
 }
