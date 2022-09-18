@@ -47,12 +47,13 @@ namespace ExercicioLogicaUm
 
                     list.Add(calc);
 
+                    Console.WriteLine();
                     Console.WriteLine(calc);
                 }
 
-                Console.WriteLine("Histórico de resultados: ");
-                foreach (Calculadora calc in list)
-                    Console.WriteLine(calc);
+                Console.WriteLine();
+                Console.WriteLine("Histórico de resultados:" );
+                list.ForEach(Console.WriteLine);
 
                 Console.WriteLine("Deseja continuar? S/N");
                 char cont = char.Parse(Console.ReadLine());
@@ -60,7 +61,7 @@ namespace ExercicioLogicaUm
                 if (cont == 'n' || cont == 'N')
                     break;
             }
-            
+
         }
     }
 }
