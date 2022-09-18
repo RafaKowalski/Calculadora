@@ -22,7 +22,7 @@ namespace ExercicioLogicaUm
                     Console.WriteLine("Digite o segundo numero:");
                     float numeroDois = float.Parse(Console.ReadLine());
 
-                    Console.WriteLine("Escolha a operação que deseja realizar: Adicao/subtracao/multiplicacao/divisao");
+                    Console.WriteLine("Escolha a operação que deseja realizar: Adicao/subtracao/multiplicacao/divisao/potenciacao/raiz");
                     Operacoes operacoes = Enum.Parse<Operacoes>(Console.ReadLine());
 
                     Calculadora calc = new Calculadora(numeroUm, numeroDois, operacoes);
@@ -38,6 +38,12 @@ namespace ExercicioLogicaUm
 
                     else if (operacoes == Operacoes.Divisao)
                         calc.Divisao();
+
+                    else if (operacoes == Operacoes.Potenciacao)
+                        calc.Potenciacao();
+
+                    else if (operacoes == Operacoes.Raiz)
+                        calc.RaizQuadrada();
 
                     list.Add(calc);
 

@@ -43,6 +43,19 @@ namespace ExercicioLógicaUm.Entities
             return Resultado;
         }
 
+        public float Potenciacao()
+        {
+            Resultado = (float)Math.Pow(NumeroUm, NumeroDois);
+            return Resultado;
+
+        }
+
+        public float RaizQuadrada()
+        {
+            Resultado = (float)Math.Sqrt(NumeroUm);
+            return Resultado;
+        }
+
         public override string ToString()
         {
             return "Resultado: " + Resultado.ToString("F2");
