@@ -56,9 +56,9 @@ namespace ExercicioLogicaUm
                 list.ForEach(Console.WriteLine);
 
                 Console.WriteLine("Deseja continuar? S/N");
-                char cont = char.Parse(Console.ReadLine());
+                char cont = char.Parse(Console.ReadLine().ToUpper());
 
-                if (cont == 'n' || cont == 'N')
+                if (cont == 'N')
                     break;
             }
 
