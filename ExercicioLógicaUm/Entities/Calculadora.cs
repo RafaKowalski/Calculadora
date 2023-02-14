@@ -21,39 +21,33 @@ namespace ExercicioLógicaUm.Entities
 
         public float Adicao()
         {
-            Resultado = NumeroUm + NumeroDois;
-            return Resultado;
+            return Resultado = NumeroUm + NumeroDois;
         }
 
         public float Subtracao()
         {
-            Resultado = NumeroUm - NumeroDois;
-            return Resultado;
+            return Resultado = NumeroUm - NumeroDois;
         }
 
         public float Multipicacao()
         {
-            Resultado = NumeroUm * NumeroDois;
-            return Resultado;
+            return Resultado = NumeroUm * NumeroDois;
         }
 
         public float Divisao()
         {
-            Resultado = NumeroUm / NumeroDois;
-            return Resultado;
+            return Resultado = NumeroUm / NumeroDois;
         }
 
         public float Potenciacao()
         {
-            Resultado = (float)Math.Pow(NumeroUm, NumeroDois);
-            return Resultado;
+            return Resultado = (float)Math.Pow(NumeroUm, NumeroDois);
 
         }
 
         public float RaizQuadrada()
         {
-            Resultado = (float)Math.Sqrt(NumeroUm);
-            return Resultado;
+            return Resultado = (float)Math.Sqrt(NumeroUm);
         }
 
         public override string ToString()
