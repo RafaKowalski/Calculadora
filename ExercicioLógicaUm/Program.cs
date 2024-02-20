@@ -16,16 +16,18 @@ namespace ExercicioLogicaUm
 
                 for (int i = 1; i <= n; i++)
                 {
+                    Calculadora calc = new Calculadora();
+
                     Console.WriteLine("Digite o primeiro numero:");
-                    float numeroUm = float.Parse(Console.ReadLine());
+                    calc.NumeroUm = float.Parse(Console.ReadLine());
 
                     Console.WriteLine("Digite o segundo numero:");
-                    float numeroDois = float.Parse(Console.ReadLine());
+                    calc.NumeroDois = float.Parse(Console.ReadLine());
 
                     Console.WriteLine("Escolha a operação que deseja realizar: Adicao/subtracao/multiplicacao/divisao/potenciacao/raiz");
                     Operacoes operacoes = Enum.Parse<Operacoes>(Console.ReadLine());
 
-                    Calculadora calc = new Calculadora(numeroUm, numeroDois, operacoes);
+                    //Calculadora calc = new Calculadora(numeroUm, numeroDois, operacoes);
 
                     if (operacoes == Operacoes.Adicao)
                         calc.Adicao();
@@ -52,7 +54,7 @@ namespace ExercicioLogicaUm
                 }
 
                 Console.WriteLine();
-                Console.WriteLine("Histórico de resultados:" );
+                Console.WriteLine("Histórico de resultados:");
                 list.ForEach(Console.WriteLine);
 
                 Console.WriteLine("Deseja continuar? S/N");
